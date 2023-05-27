@@ -10,12 +10,18 @@ def read_file(path):
 
 
 def drop_fun(df):
+    """ This functions taken df as input and 
+        drop null values and
+        return dataframe"""
     df = df.drop_duplicates()
     df = df.dropna() #drop nan rows if present
     return df
 
 
 def rename_cols(df, col_list):
+    """ This functions taken df as input.
+    rename columns 
+    and return dataframe"""
     ''' Renaming column names'''
     df.columns = col_list
     return df
